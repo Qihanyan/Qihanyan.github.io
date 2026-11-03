@@ -1,0 +1,12 @@
+<section class="block first">
+  <h2><% if (is_tag()) { %>Tag: <%= page.tag %><% } else if (is_category()) { %>Category: <%= page.category %><% } else { %>Writing<% } %></h2>
+  <% if (page.posts.length) { %>
+    <%- partial('_partial/post-list', { posts: page.posts }) %>
+  <% } else { %>
+    <p class="muted">Nothing here yet.</p>
+  <% } %>
+  <nav class="post-nav">
+    <% if (page.prev) { %><a href="<%- url_for(page.prev_link) %>">← Newer</a><% } else { %><span></span><% } %>
+    <% if (page.next) { %><a href="<%- url_for(page.next_link) %>">Older →</a><% } %>
+  </nav>
+</section>

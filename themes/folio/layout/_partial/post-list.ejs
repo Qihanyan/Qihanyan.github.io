@@ -1,0 +1,8 @@
+<ul class="post-list">
+<% posts.each(function (p) { %>
+  <li>
+    <time datetime="<%= date_xml(p.date) %>"><%= date(p.date, 'YYYY-MM-DD') %></time>
+    <a href="<%- url_for(p.path) %>"><%= p.title || '(untitled)' %></a>
+  </li>
+<% }) %>
+</ul>

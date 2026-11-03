@@ -1,0 +1,97 @@
+<% const r = site.data.resume || {}; %>
+
+<section class="hero">
+  <p class="eyebrow"><%= r.location %></p>
+  <h1><%= r.name %></h1>
+  <p class="headline"><%= r.headline %></p>
+  <p class="summary"><%= r.summary %></p>
+  <div class="links">
+    <% if (r.email) { %><a class="btn primary" href="mailto:<%= r.email %>">Email me</a><% } %>
+    <% if (r.resume_pdf) { %><a class="btn" href="<%- url_for(r.resume_pdf) %>" target="_blank" rel="noopener">Résumé (PDF)</a><% } %>
+    <% if (r.github) { %><a class="btn" href="<%= r.github %>" target="_blank" rel="noopener">GitHub</a><% } %>
+    <% if (r.linkedin) { %><a class="btn" href="<%= r.linkedin %>" target="_blank" rel="noopener">LinkedIn</a><% } %>
+  </div>
+</section>
+
+<% if (r.experience) { %>
+<section id="experience" class="block">
+  <h2>Experience</h2>
+  <% r.experience.forEach(function (e) { %>
+  <article class="entry">
+    <div class="entry-head">
+      <div>
+        <h3><%= e.role %></h3>
+        <p class="org"><%= e.org %></p>
+      </div>
+      <span class="date"><%= e.date %></span>
+    </div>
+    <% if (e.metrics) { %>
+    <div class="metrics">
+      <% e.metrics.forEach(function (m) { %>
+      <div class="metric"><strong><%= m.value %></strong><span><%= m.label %></span></div>
+      <% }) %>
+    </div>
+    <% } %>
+    <ul><% (e.highlights || []).forEach(function (h) { %><li><%= h %></li><% }) %></ul>
+  </article>
+  <% }) %>
+</section>
+<% } %>
+
+<% if (r.projects) { %>
+<section id="projects" class="block">
+  <h2>Projects</h2>
+  <div class="cards">
+  <% r.projects.forEach(function (p) { %>
+    <article class="card">
+      <div class="card-top">
+        <span class="date"><%= p.date %></span>
+        <% if (p.status) { %><span class="pill"><%= p.status %></span><% } %>
+      </div>
+      <h3><% if (p.url) { %><a href="<%= p.url %>" target="_blank" rel="noopener"><%= p.name %> ↗</a><% } else { %><%= p.name %><% } %></h3>
+      <ul><% (p.highlights || []).forEach(function (h) { %><li><%= h %></li><% }) %></ul>
+      <% if (p.stack) { %><div class="tags"><% p.stack.forEach(function (s) { %><span><%= s %></span><% }) %></div><% } %>
+    </article>
+  <% }) %>
+  </div>
+</section>
+<% } %>
+
+<% if (r.education) { %>
+<section id="education" class="block">
+  <h2>Education</h2>
+  <% r.education.forEach(function (ed) { %>
+  <article class="entry compact">
+    <div class="entry-head">
+      <div>
+        <h3><%= ed.school %></h3>
+        <p class="org"><%= ed.degree %><% if (ed.gpa) { %> · GPA <%= ed.gpa %><% } %></p>
+      </div>
+      <span class="date"><%= ed.date %></span>
+    </div>
+    <% if (ed.courses) { %><p class="courses"><%= ed.courses %></p><% } %>
+  </article>
+  <% }) %>
+</section>
+<% } %>
+
+<% if (r.skills) { %>
+<section id="skills" class="block">
+  <h2>Skills</h2>
+  <dl class="skills">
+  <% r.skills.forEach(function (g) { %>
+    <dt><%= g.group %></dt>
+    <dd class="tags"><% g.items.forEach(function (s) { %><span><%= s %></span><% }) %></dd>
+  <% }) %>
+  </dl>
+</section>
+<% } %>
+
+<% if (site.posts.length) { %>
+<section id="writing" class="block">
+  <h2>Writing</h2>
+  <%- partial('_partial/post-list', { posts: site.posts.sort('date', -1).limit(5) }) %>
+  <% if (site.posts.length > 5) { %><p><a href="<%- url_for('/blog/') %>">All posts →</a></p><% } %>
+</section>
+<% } %>
+

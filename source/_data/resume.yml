@@ -1,0 +1,100 @@
+# All homepage content lives here. Edit this file and push — the site rebuilds automatically.
+
+name: Fangjie Gao
+headline: Data, quant systems & AI agents
+location: Atlanta, GA
+email: fgao76@gatech.edu
+github: https://github.com/Qihanyan
+# linkedin: https://www.linkedin.com/in/your-handle
+resume_pdf: /Fangjie_Gao_Resume.pdf
+
+summary: >-
+  M.S. ECE student at Georgia Tech. My background is circuit design across analog, RF and
+  digital, and I've since moved into data analysis and AI agents. I've worked on data-driven
+  process improvement, low-latency trading infrastructure and LLM agent workflows.
+
+experience:
+  - org: Shanghai Banzhi Quant Technology Co., Ltd
+    role: Quantitative Development Intern
+    date: May – Jul 2026
+    highlights:
+      - Built Python–C++ trading interface wrappers for CTP (China Futures Trading Platform) with pybind11; profiled the request–callback chain with flame graphs and applied CPU affinity pinning.
+      - Removed a hot-path double-copy marshaling layer and replaced generic dict-to-dynamic-class reconstruction (~55 setattr calls per callback) with direct typed struct-to-dict conversion.
+      - Built end-to-end latency instrumentation (5 trace checkpoints, 4 stage metrics) across the Python / C++ / exchange-library boundary, plus a benchmark harness and trimmed-mean visualization tooling.
+      - Live A/B tested across 3 trading sessions; callback-processing latency fell ~61% single-process and ~86% multi-process, and the improvement held in 6 of 6 comparisons.
+    metrics:
+      - value: "−86%"
+        label: multi-process callback latency
+      - value: "−61%"
+        label: single-process callback latency
+
+  - org: Michigan Medicine — IOE 481 Practicum
+    role: Interventional Radiology Process Optimization
+    date: Jan – Apr 2026
+    highlights:
+      - Interviewed 3 stakeholder groups (IR surgeon, procedure nurses, technologist supervisors) and ran 4 on-site observations to map the first-case workflow and cross-validate root causes.
+      - Analyzed a full year (2025) of delay data and quantified $1.1M+ in annual loss ($57/min IR downtime) from 700+ delays coded "Unknown" (55% of entries); ranked the top 10 delay drivers by frequency × severity using Pareto analysis.
+      - Standardized SOAP to reduce consent-related delays, and delivered current- and future-state process maps and a formal report to IR operations leadership.
+    metrics:
+      - value: "$1.1M+"
+        label: annual loss quantified
+
+  - org: Inceptio Technology
+    role: Data Analysis Intern
+    date: Aug 2023
+    highlights:
+      - Analyzed 6 months of data from 200+ trucks (~50K trips) in SQL to relate fuel consumption to congestion, wind resistance, payload and route topology.
+      - Identified 5 statistically significant factors with correlation heatmaps and partial dependence plots; congestion and wind resistance explained 35% of fuel-consumption variance.
+      - Found route optimization to be the highest-ROI lever, with an estimated 8–12% potential cut in fuel consumption.
+
+projects:
+  - name: Credit Card Fraud Detection
+    status: Kaggle · in progress
+    date: Aug 2026 – Now
+    stack: [Python, pandas, Feature engineering]
+    highlights:
+      - Feature pipeline that turns raw transactions into 62 temporal, geospatial, behavioral and categorical features.
+      - Per-card rolling counts and spend over 1h–7d windows, leakage-safe z-scores computed only from prior transactions, and Haversine "impossible travel" detection.
+      - Out-of-fold, Bayesian-smoothed target encoding for high-cardinality fields, plus first-time merchant/category flags.
+
+  - name: Self-Hosted AI Agent Music Manager
+    date: May – Aug 2026
+    stack: [Python, FastAPI, WebSocket, React, LangChain, n8n, Docker, Nginx, systemd]
+    highlights:
+      - Conversational agent built on LangChain tool calling, with 95%+ tool-invocation accuracy across 4 core operations.
+      - FastAPI + WebSocket backend that streams progress for 15–30s multi-step tasks; self-hosted LLM gateway that handles access to multiple model providers.
+      - Fault-tolerant parsing layer that raised the batch task success rate from 0% to 95%+; hardened with path whitelisting, a limited-privilege account and a systemd sandbox.
+
+  - name: AI-Supported Quant Research Platform
+    date: Jan – Aug 2026
+    stack: [Python, Groq Llama-3.3-70B, Docker, HuggingFace Spaces, GitHub Actions]
+    highlights:
+      - End-to-end pipeline from multi-source data ingestion through technical analysis to LLM-generated research reports.
+      - 10+ classical technical-analysis systems; a prompt pipeline that structures factors, macro data, news and retail sentiment.
+      - Fully automated ingestion → analysis → HTML → email delivery, containerized, with credentials kept in GitHub Secrets.
+
+education:
+  - school: Georgia Institute of Technology
+    degree: M.S. Electrical and Computer Engineering
+    date: Fall 2026
+    courses: Convex Optimization, Data Mining & Statistical Learning, Mathematical Foundations of ML, Conversational AI
+  - school: University of Michigan
+    degree: B.S. Industrial and Operations Engineering, Minor in EE
+    date: May 2026
+    gpa: "3.84 / 4.00"
+    courses: Statistical Quality Control, Discrete-Event Simulation, Derivative Instruments, Optimization & Computational Methods, Data Structures & Algorithms
+  - school: Shanghai Jiao Tong University
+    degree: B.S. Electrical and Computer Engineering
+    date: Aug 2026
+    gpa: "3.37 / 4.00"
+    courses: Analog Electronic Circuits, Signals & Systems, Electromagnetics, Probabilistic Methods
+
+skills:
+  - group: ML & Data
+    items: [Prompt engineering, RAG, LangChain, Predictive labeling, Cross-validation, Backtesting, Hyperparameter tuning, Anomaly detection, Evaluation]
+  - group: Programming
+    items: [Python, pandas, SQL, C, C++, MATLAB, Shell]
+  - group: Infrastructure
+    items: [Docker, GitHub Actions, Git, SSH, Nginx, n8n, HuggingFace Spaces, pybind11, Tmux, Vim, Make, Power BI]
+  - group: Languages
+    items: [English (fluent, TOEFL 111), Chinese (native)]

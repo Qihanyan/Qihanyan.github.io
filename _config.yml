@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Fangjie Gao
 subtitle: ''
-description: ''
+description: 'Fangjie Gao — M.S. ECE at Georgia Tech. Data analysis, quant development and AI agents.'
 keywords:
-author: John Doe
+author: Fangjie Gao
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://qihanyan.github.io
 permalink: posts/:abbrlink/ 
 # abbrlink config
 abbrlink:
@@ -64,7 +64,7 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: 'blog'
   per_page: 10
   order_by: -date
 
@@ -100,7 +100,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: LiveForCode
+theme: folio
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
