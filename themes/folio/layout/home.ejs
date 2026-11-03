@@ -57,6 +57,23 @@
 </section>
 <% } %>
 
+<% if (r.hardware && r.hardware.items) { %>
+<section id="hardware" class="block">
+  <h2>Circuit design background</h2>
+  <% if (r.hardware.intro) { %><p class="section-intro"><%= r.hardware.intro %></p><% } %>
+  <div class="mini-grid">
+  <% r.hardware.items.forEach(function (h) { %>
+    <article class="mini">
+      <span class="date"><%= h.date %></span>
+      <h3><%= h.name %></h3>
+      <p class="org"><%= h.course %></p>
+      <p class="mini-body"><%= h.summary %></p>
+    </article>
+  <% }) %>
+  </div>
+</section>
+<% } %>
+
 <% if (r.education) { %>
 <section id="education" class="block">
   <h2>Education</h2>
@@ -83,6 +100,10 @@
     <dt><%= g.group %></dt>
     <dd class="tags"><% g.items.forEach(function (s) { %><span><%= s %></span><% }) %></dd>
   <% }) %>
+  <% if (r.interests) { %>
+    <dt>Interests</dt>
+    <dd class="interests"><%= r.interests.join(' · ') %></dd>
+  <% } %>
   </dl>
 </section>
 <% } %>

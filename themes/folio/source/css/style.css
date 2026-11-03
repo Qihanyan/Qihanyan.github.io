@@ -106,6 +106,14 @@ h3 { font: 600 1.15rem/1.35 var(--serif); margin: 0; }
 .skills dd { margin: 0; }
 .skills .tags { margin-top: 0; }
 
+.section-intro { color: var(--muted); max-width: 62ch; margin: -8px 0 22px; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.mini { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+.mini h3 { font-size: 1rem; margin-top: 6px; }
+.mini .org { font-size: .85rem; }
+.mini-body { margin: 10px 0 0; font-size: .88rem; color: var(--muted); line-height: 1.55; }
+.interests { color: var(--muted); font-size: .92rem; padding-top: 3px; }
+
 /* posts */
 .post-list { list-style: none; padding: 0; margin: 0; }
 .post-list li { display: flex; gap: 20px; padding: 10px 0; border-bottom: 1px solid var(--line); }
@@ -129,5 +137,6 @@ h3 { font: 600 1.15rem/1.35 var(--serif); margin: 0; }
   .skills { grid-template-columns: 1fr; gap: 6px; }
   .skills dd { margin-bottom: 12px; }
   .card { padding: 18px; }
+  .mini-grid { grid-template-columns: 1fr; }
   .post-list li { flex-direction: column; gap: 0; }
 }

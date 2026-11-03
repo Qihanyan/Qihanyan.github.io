@@ -47,6 +47,13 @@ experience:
       - Identified 5 statistically significant factors with correlation heatmaps and partial dependence plots; congestion and wind resistance explained 35% of fuel-consumption variance.
       - Found route optimization to be the highest-ROI lever, with an estimated 8–12% potential cut in fuel consumption.
 
+  - org: Shanghai Jiao Tong University — ECE3120J Digital Integrated Circuits
+    role: Teaching Assistant
+    date: May – Aug 2025
+    highlights:
+      - Led weekly lab sections teaching circuit simulation in Cadence Virtuoso; graded quizzes, homework, labs and projects with constructive feedback.
+      - Coordinated with the instructor and a co-TA to keep course logistics and student communication running smoothly.
+
 projects:
   - name: Credit Card Fraud Detection
     status: Kaggle · in progress
@@ -73,6 +80,36 @@ projects:
       - 10+ classical technical-analysis systems; a prompt pipeline that structures factors, macro data, news and retail sentiment.
       - Fully automated ingestion → analysis → HTML → email delivery, containerized, with credentials kept in GitHub Secrets.
 
+  - name: Clinic Resource Optimization
+    status: IOE 474 · Simulation
+    date: Jan – Apr 2025
+    stack: [Discrete-event simulation, ProModel, Experimental design]
+    highlights:
+      - Built a team discrete-event simulation of a clinic from real patient arrival and service-time data.
+      - Ran experiments across staffing levels, intake-room counts and appointment frequencies to optimize resource use and throughput.
+      - Recommended changes that brought resource utilization into the 40–70% target range, balanced wait times and maximized clinic revenue; delivered as a technical paper and presentation.
+
+# Earlier hardware work, shown compactly below the main projects
+hardware:
+  intro: Before moving into data and AI, I trained in analog, RF and digital circuit design. That background is why I enjoy low-level performance work like latency profiling and C++ interop.
+  items:
+    - name: Wi-Fi 5 Superheterodyne Receiver
+      course: EECS 411 Microwave Circuits
+      date: Aug – Dec 2025
+      summary: 5 GHz / 160 MHz band-select front end with two-stage down-conversion (5.5 GHz → 1.08 GHz → 80 MHz), high-gain and low-noise amplification, and parasitic-aware component models.
+    - name: Low-Dropout Voltage Regulator
+      course: EECS 413 Monolithic Amplifier Circuits
+      date: Aug – Dec 2025
+      summary: 130 nm, 1.8 V → 1.2 V PMOS-pass LDO with a two-stage amplifier; <0.01 V dropout, <100 µA quiescent current, >89° phase margin, 50 dB PSRR; passed DRC/LVS.
+    - name: Switched-Capacitor DC-DC Converter
+      course: Research · Advisor Xuyang Lu, SJTU
+      date: May – Aug 2025
+      summary: 1.8 V → 0.9 V buck converter using 9 capacitors over 18 phases, hysteretic current control, and an 18-to-9 one-hot phase decoder synthesized with Design Compiler and Innovus.
+    - name: Transistor-Level 8-bit Full Adder
+      course: EECS 312 Digital Integrated Circuits
+      date: Jan – Apr 2025
+      summary: Mirror-adder architecture that uses CMOS inversion to minimize transistor count and balance speed against power.
+
 education:
   - school: Georgia Institute of Technology
     degree: M.S. Electrical and Computer Engineering
@@ -93,8 +130,12 @@ skills:
   - group: ML & Data
     items: [Prompt engineering, RAG, LangChain, Predictive labeling, Cross-validation, Backtesting, Hyperparameter tuning, Anomaly detection, Evaluation]
   - group: Programming
-    items: [Python, pandas, SQL, C, C++, MATLAB, Shell]
+    items: [Python, pandas, SQL, C, C++, MATLAB, Shell, Verilog]
   - group: Infrastructure
     items: [Docker, GitHub Actions, Git, SSH, Nginx, n8n, HuggingFace Spaces, pybind11, Tmux, Vim, Make, Power BI]
+  - group: Circuit Design
+    items: [Cadence Virtuoso, Keysight ADS, Synopsys Design Compiler, Innovus, Vivado, Proteus]
   - group: Languages
     items: [English (fluent with TOEFL 111), Chinese (native)]
+
+interests: [Piano, Violin, Swimming, Video editing, Photography]
