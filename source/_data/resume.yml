@@ -97,4 +97,4 @@ skills:
   - group: Infrastructure
     items: [Docker, GitHub Actions, Git, SSH, Nginx, n8n, HuggingFace Spaces, pybind11, Tmux, Vim, Make, Power BI]
   - group: Languages
-    items: [English (fluent, TOEFL 111), Chinese (native)]
+    items: [English (fluent with TOEFL 111), Chinese (native)]
