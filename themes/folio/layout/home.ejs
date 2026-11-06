@@ -64,7 +64,10 @@
   <% r.publications.forEach(function (p) { %>
     <li>
       <h3><% if (p.url) { %><a href="<%= p.url %>" target="_blank" rel="noopener"><%= p.title %> ↗</a><% } else { %><%= p.title %><% } %></h3>
-      <p class="org"><span class="pill"><%= p.venue %></span> <%= p.role %></p>
+      <% if (p.authors) { %>
+      <p class="authors"><%- p.authors.map(function (a) { var s = escape_html(a); return a === r.name ? '<strong>' + s + '</strong>' : s; }).join(', ') %><%= p.more_authors ? ', et al.' : '' %></p>
+      <% } %>
+      <p class="org"><span class="pill"><%= p.venue %></span><% if (p.role) { %> <%= p.role %><% } %></p>
       <% if (p.note) { %><p class="mini-body"><%= p.note %></p><% } %>
     </li>
   <% }) %>

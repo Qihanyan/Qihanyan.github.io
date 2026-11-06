@@ -48,7 +48,7 @@ experience:
       - Acquired and logged real-time impedance and time-gated sensor waveforms by interfacing digital oscilloscopes with the data acquisition software.
     metrics:
       - value: "IEEE BioCAS"
-        label: 2026 publication · 5th author
+        label: 2026 co-authored publication
 
   - org: Inceptio Technology
     role: Data Analysis Intern
@@ -57,6 +57,12 @@ experience:
       - Analyzed 6 months of data from 200+ trucks (~50K trips) in SQL to relate fuel consumption to congestion, wind resistance, payload and route topology.
       - Identified 5 statistically significant factors with correlation heatmaps and partial dependence plots; congestion and wind resistance explained 35% of fuel-consumption variance.
       - Found route optimization to be the highest-ROI lever, with an estimated 8–12% potential cut in fuel consumption.
+
+  - org: University of Michigan — Electromagnetics
+    role: Grader
+    date: Jan – Apr 2026
+    highlights:
+      - Graded coursework for the undergraduate electromagnetics course taught by Prof. Amir Mortazawi.
 
   - org: Shanghai Jiao Tong University — ECE3120J Digital Integrated Circuits
     role: Teaching Assistant
@@ -101,9 +107,10 @@ projects:
       - Recommended changes that brought resource utilization into the 40–70% target range, balanced wait times and maximized clinic revenue; delivered as a technical paper and presentation.
 
 publications:
-  - title: CMOS All-in-One-Chip Microfluidic Cytometer
+  - title: CMOS All-in-One-Chip Microfluidic Cytometer with Particle Manipulation and Multimodal Sensing
     venue: IEEE BioCAS 2026
-    role: 5th author
+    authors: [Yuchen Ai, Runqing Cai, Muhammad Dilawar Niazi, Yuxiang Zhou, Jin Zhu, Fangjie Gao, Zixiang Li, Yaping Dan, Zijie Qu]
+    more_authors: true   # renders "et al." after the list
     note: Monolithic CMOS chip combining active particle manipulation (DEP, TWEO pumping) with multi-modal impedance and time-gated sensing.
     # url: https://doi.org/...   # add the DOI / IEEE Xplore link once it's online
 
