@@ -112,6 +112,11 @@ h3 { font: 600 1.15rem/1.35 var(--serif); margin: 0; }
 .mini h3 { font-size: 1rem; margin-top: 6px; }
 .mini .org { font-size: .85rem; }
 .mini-body { margin: 10px 0 0; font-size: .88rem; color: var(--muted); line-height: 1.55; }
+.pubs { list-style: none; padding: 0; margin: 0; }
+.pubs li { padding: 4px 0 4px 16px; border-left: 2px solid var(--accent); }
+.pubs li + li { margin-top: 18px; }
+.pubs .org { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.pubs h3 a { color: inherit; text-decoration: none; }
 .interests { color: var(--muted); font-size: .92rem; padding-top: 3px; }
 
 /* posts */

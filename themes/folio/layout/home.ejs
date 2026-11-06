@@ -57,6 +57,21 @@
 </section>
 <% } %>
 
+<% if (r.publications) { %>
+<section id="publications" class="block">
+  <h2>Publications</h2>
+  <ul class="pubs">
+  <% r.publications.forEach(function (p) { %>
+    <li>
+      <h3><% if (p.url) { %><a href="<%= p.url %>" target="_blank" rel="noopener"><%= p.title %> ↗</a><% } else { %><%= p.title %><% } %></h3>
+      <p class="org"><span class="pill"><%= p.venue %></span> <%= p.role %></p>
+      <% if (p.note) { %><p class="mini-body"><%= p.note %></p><% } %>
+    </li>
+  <% }) %>
+  </ul>
+</section>
+<% } %>
+
 <% if (r.hardware && r.hardware.items) { %>
 <section id="hardware" class="block">
   <h2>Circuit design background</h2>

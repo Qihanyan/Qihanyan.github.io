@@ -39,6 +39,17 @@ experience:
       - value: "$1.1M+"
         label: annual loss quantified
 
+  - org: Georgia Institute of Technology — Xuyang Lu's Lab
+    role: Graduate Research Assistant
+    date: 2026
+    highlights:
+      - Ran experimental protocols validating active particle manipulation and multi-modal sensing on a monolithic CMOS microfluidic cytometer chip, supporting findings published at IEEE BioCAS 2026.
+      - Tracked dielectrophoresis (DEP) particle trajectories and Traveling-Wave Electro-Osmotic (TWEO) pump velocities with high-resolution optical microscopy.
+      - Acquired and logged real-time impedance and time-gated sensor waveforms by interfacing digital oscilloscopes with the data acquisition software.
+    metrics:
+      - value: "IEEE BioCAS"
+        label: 2026 publication · 5th author
+
   - org: Inceptio Technology
     role: Data Analysis Intern
     date: Aug 2023
@@ -88,6 +99,13 @@ projects:
       - Built a team discrete-event simulation of a clinic from real patient arrival and service-time data.
       - Ran experiments across staffing levels, intake-room counts and appointment frequencies to optimize resource use and throughput.
       - Recommended changes that brought resource utilization into the 40–70% target range, balanced wait times and maximized clinic revenue; delivered as a technical paper and presentation.
+
+publications:
+  - title: CMOS All-in-One-Chip Microfluidic Cytometer
+    venue: IEEE BioCAS 2026
+    role: 5th author
+    note: Monolithic CMOS chip combining active particle manipulation (DEP, TWEO pumping) with multi-modal impedance and time-gated sensing.
+    # url: https://doi.org/...   # add the DOI / IEEE Xplore link once it's online
 
 # Earlier hardware work, shown compactly below the main projects
 hardware:
