@@ -5,7 +5,7 @@ headline: Data, quant systems & AI agents
 location: Atlanta, GA
 email: fgao76@gatech.edu
 github: https://github.com/Qihanyan
-# linkedin: https://www.linkedin.com/in/your-handle
+linkedin: https://www.linkedin.com/in/fangjie-gao-4a7704347/
 resume_pdf: /Fangjie_Gao_Resume.pdf
 
 summary: >-
@@ -72,6 +72,16 @@ experience:
       - Coordinated with the instructor and a co-TA to keep course logistics and student communication running smoothly.
 
 projects:
+  - name: Conversational RAG Assistant with Long-Term Memory
+    status: Georgia Tech · ECE 6256
+    date: Fall 2026
+    stack: [Python, vLLM, Llama-3.1-8B, SQLite FTS5, Dense embeddings, Slurm, H100]
+    highlights:
+      - Course TA chatbot that answers questions over a 200+ paper research corpus with paper-level citations, served through a vLLM OpenAI-compatible endpoint (Llama-3.1-8B).
+      - Hybrid retrieval combining SQLite FTS5 BM25 and dense embeddings via Reciprocal Rank Fusion with a per-paper diversity cap, plus multi-turn context carry-over for follow-ups like "compare all three we discussed".
+      - Cross-session user memory with rule-based fact extraction and a privacy filter that rejects passwords, IDs, contact info and health data; passed 16/16 positive and negative memory probes on the real model.
+      - Ablations on an H100 Slurm cluster; a top-k sweep showed citation precision peaking at k=2, and context carry-over raised last-turn multi-turn hit rate from 0.67 to 1.00 compared with query rewriting.
+
   - name: Credit Card Fraud Detection
     status: Kaggle · in progress
     date: Aug 2026 – Now
@@ -157,7 +167,7 @@ skills:
   - group: Programming
     items: [Python, pandas, SQL, C, C++, MATLAB, Shell, Verilog]
   - group: Infrastructure
-    items: [Docker, GitHub Actions, Git, SSH, Nginx, n8n, HuggingFace Spaces, pybind11, Tmux, Vim, Make, Power BI]
+    items: [Docker, vLLM, Slurm, GitHub Actions, Git, SSH, Nginx, n8n, HuggingFace Spaces, pybind11, Tmux, Vim, Make, Power BI]
   - group: Circuit Design
     items: [Cadence Virtuoso, Keysight ADS, Synopsys Design Compiler, Innovus, Vivado, Proteus]
   - group: Languages
