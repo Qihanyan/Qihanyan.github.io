@@ -16,7 +16,7 @@ summary: >-
 experience:
   - org: Shanghai Banzhi Quant Technology Co., Ltd
     role: Quantitative Development Intern
-    date: May – Jul 2026
+    date: May – Aug 2026
     highlights:
       - Built Python–C++ trading interface wrappers for CTP (China Futures Trading Platform) with pybind11; profiled the request–callback chain with flame graphs and applied CPU affinity pinning.
       - Removed a hot-path double-copy marshaling layer and replaced generic dict-to-dynamic-class reconstruction (~55 setattr calls per callback) with direct typed struct-to-dict conversion.
@@ -40,7 +40,7 @@ experience:
         label: annual loss quantified
 
   - org: Georgia Institute of Technology — Xuyang Lu's Lab
-    role: Graduate Research Assistant
+    role: Undergraduate Research Assistant
     date: 2026
     highlights:
       - Ran experimental protocols validating active particle manipulation and multi-modal sensing on a monolithic CMOS microfluidic cytometer chip, supporting findings published at IEEE BioCAS 2026.
@@ -52,7 +52,7 @@ experience:
 
   - org: Inceptio Technology
     role: Data Analysis Intern
-    date: Aug 2023
+    date: May – Aug 2023
     highlights:
       - Analyzed 6 months of data from 200+ trucks (~50K trips) in SQL to relate fuel consumption to congestion, wind resistance, payload and route topology.
       - Identified 5 statistically significant factors with correlation heatmaps and partial dependence plots; congestion and wind resistance explained 35% of fuel-consumption variance.
